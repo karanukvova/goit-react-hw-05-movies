@@ -28,7 +28,7 @@ const ReviewsPage = () => {
 
         const casts = await fetchFilmsReviews(postId);
         setReviews(casts);
-        toast.success('casts details were successfully fetched!', toastConfig);
+        toast.success('reviews details were successfully fetched!', toastConfig);
       } catch (error) {
         setError(error.message);
         toast.error(error.message, toastConfig);
