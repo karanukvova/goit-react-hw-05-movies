@@ -42,7 +42,7 @@ const ReviewsPage = () => {
 
   return (
     <div>
-      <h1>CommentsPage</h1>
+      <h1>ReviewsPage</h1>
       {error !== null && (
         <p className="c-error">
           Oops, some error occured. Please, try again later. Error: {error}
