@@ -1,6 +1,7 @@
+import { StyledLink } from 'components/App';
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { MutatingDots } from 'react-loader-spinner';
-import { Link, NavLink,  Route,  Routes, useLocation, useParams } from 'react-router-dom';
+import { Link,  Route,  Routes, useLocation, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { fetchFilmsDetails } from 'services/api';
 const CastsPage = lazy(() => import('./CastsPage'));
@@ -98,8 +99,8 @@ const MovieDetails = () => {
             <h3>About</h3>
             <p>{filmDetails.overview}</p>
           </div>
-          <NavLink to="casts">Casts</NavLink>
-          <NavLink to="reviews">Reviews</NavLink>
+          <StyledLink to="casts">Casts</StyledLink>
+          <StyledLink to="reviews">Reviews</StyledLink>
         </div>
       )}
       <Suspense

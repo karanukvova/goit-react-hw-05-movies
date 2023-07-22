@@ -1,17 +1,25 @@
 import { Suspense, lazy } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { MutatingDots } from 'react-loader-spinner';
+import styled from 'styled-components';
 const HomePage = lazy(() => import('pages/HomePage'));
 const Movies = lazy(() => import('pages/Movies'));
 const MovieDetails = lazy(() => import('pages/MovieDetails'));
 
+export const StyledLink = styled(NavLink)`
+  color: black;
+
+  &.active {
+    color: orange;
+  }
+`;
 export const App = () => {
   return (
     <div>
       <header>
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/search">Movies</NavLink>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/search">Movies</StyledLink>
         </nav>
       </header>
       <main>
